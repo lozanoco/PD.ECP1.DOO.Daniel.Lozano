@@ -1,12 +1,14 @@
 package PD.ColectorOperaciones.Daniel.Lozano;
 
-public class Summation {
-    private final int operator1, operator2;
+public class Summation extends Operations{
+	
+    public Summation(int operator1, int operator2) {
+		super(operator1, operator2);
+		// TODO Auto-generated constructor stub
+	}
 
-    public Summation(final int operator1, final int operator2) {
-        this.operator1 = operator1;
-        this.operator2 = operator2;
-    }
+	private final int operator1, operator2;
+
 
     public int getOperator1() {
         return operator1;
@@ -15,7 +17,7 @@ public class Summation {
     public int getOperator2() {
         return operator2;
     }
-
+    
     public int calcular() {
         return this.operator1 + this.operator2;
     }

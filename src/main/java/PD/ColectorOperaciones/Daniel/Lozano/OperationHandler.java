@@ -24,11 +24,12 @@ public class OperationHandler {
         for (Operations operando : this.operators) {
             if (operando != null) {
                 System.out.print(separator + operando.toString());
-               	result +=  operando.calcular();
+               	result += operando.calcular();
             }
             separator = "+";
         }
         System.out.print(">>> ");
         return result;
     }
+
 }
