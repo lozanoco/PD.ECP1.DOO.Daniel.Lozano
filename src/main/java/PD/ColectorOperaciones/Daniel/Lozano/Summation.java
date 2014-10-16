@@ -7,24 +7,13 @@ public class Summation extends Operations{
 		// TODO Auto-generated constructor stub
 	}
 
-	private final int operator1, operator2;
-
-
-    public int getOperator1() {
-        return operator1;
-    }
-
-    public int getOperator2() {
-        return operator2;
-    }
-    
     public int calcular() {
-        return this.operator1 + this.operator2;
+        return this.getOperator1() + this.getOperator2();
     }
 
     @Override
     public String toString() {
-        return "[" + operator1 + "+" + operator2 + "]";
+        return "[" + this.getOperator1() + "+" + this.getOperator2() + "]";
     }
 
 }
