@@ -16,7 +16,7 @@ public class Summation {
         return operator2;
     }
 
-    public int sum() {
+    public int calcular() {
         return this.operator1 + this.operator2;
     }
 

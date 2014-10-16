@@ -16,7 +16,7 @@ public class Subtraction {
         return operator2;
     }
 
-    public int subtract() {
+    public int calcular() {
         return this.operator1 - this.operator2;
     }
 
