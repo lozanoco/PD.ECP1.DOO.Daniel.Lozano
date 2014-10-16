@@ -18,6 +18,7 @@ public class Main {
         operationHandler.add(new Subtraction(4, 1));
         operationHandler.add(new Summation(3, 6));
         operationHandler.add(new Subtraction(3, 2));
+        operationHandler.add(new Multiplication(3, 2));
 
         System.out.println("Total2:" + operationHandler.total());
     }
