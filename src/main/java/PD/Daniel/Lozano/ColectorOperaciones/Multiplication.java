@@ -1,4 +1,4 @@
-package PD.ColectorOperaciones.Daniel.Lozano;
+package PD.Daniel.Lozano.ColectorOperaciones;
 
 public class Multiplication extends Operations{
 	

@@ -1,4 +1,4 @@
-package PD.ColectorOperaciones.Daniel.Lozano;
+package PD.Daniel.Lozano.ColectorOperaciones;
 
 public abstract class Operations {
     private int operator1;

@@ -1,4 +1,4 @@
-package PD.ColectorOperaciones.Daniel.Lozano;
+package PD.Daniel.Lozano.ColectorOperaciones;
 
 import java.awt.List;
 import java.util.ArrayList;

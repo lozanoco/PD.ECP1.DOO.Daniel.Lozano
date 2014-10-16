@@ -1,8 +1,12 @@
-package PD.ColectorOperaciones.Daniel.Lozano;
+package PD.Daniel.Lozano.ColectorOperaciones;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import PD.Daniel.Lozano.ColectorOperaciones.Multiplication;
+import PD.Daniel.Lozano.ColectorOperaciones.OperationHandler;
+import PD.Daniel.Lozano.ColectorOperaciones.Subtraction;
+import PD.Daniel.Lozano.ColectorOperaciones.Summation;
 import static org.junit.Assert.assertEquals;
 
 public class OperationsTest {

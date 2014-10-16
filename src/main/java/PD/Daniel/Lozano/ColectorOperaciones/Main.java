@@ -1,4 +1,4 @@
-package PD.ColectorOperaciones.Daniel.Lozano;
+package PD.Daniel.Lozano.ColectorOperaciones;
 /*
  * Realizar un buen diseño del ejemplo original (con Addition y sin Multiplication)
  * Cambiar el nombre de la clase “Addition” por “Summation”, e Incorporar la operación “Multiplication”
