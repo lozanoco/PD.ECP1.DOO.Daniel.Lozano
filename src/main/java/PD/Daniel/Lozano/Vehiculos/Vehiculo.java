@@ -18,5 +18,5 @@ public abstract class Vehiculo {
 		return id_vehiculo;
 	}
 
-	public abstract Vehiculo crearVehiculo();
+	public abstract double calcularAlquiler(int dias);
 }

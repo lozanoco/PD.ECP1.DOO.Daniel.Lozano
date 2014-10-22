@@ -37,8 +37,9 @@ public class FactoriaVehiculos {
 	return vehiculos;
 	}
 	
-	public void calcularAlquiler(String id, int dias){
-		
+	public double calcularAlquiler(String id, int dias){
+		Vehiculo vehiculo = obtenerVehiculo(id);
+		return vehiculo.calcularAlquiler(dias);
 	}
 	
 	public Vehiculo obtenerVehiculo(String id){
