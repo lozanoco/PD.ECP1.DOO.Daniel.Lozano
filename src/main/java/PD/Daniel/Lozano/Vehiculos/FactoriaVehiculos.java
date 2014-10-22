@@ -25,7 +25,7 @@ public class FactoriaVehiculos {
 	}
 
 	public void setTipoVehiculo(AltaVehiculo altaVehiculo){
-		this.tipoVehiculo = altaVehiculo;
+		FactoriaVehiculos.tipoVehiculo = altaVehiculo;
 	}
 
 	public String mostrarVehiculos(){
