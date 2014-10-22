@@ -2,10 +2,8 @@ package PD.Daniel.Lozano.Vehiculos;
 
 public abstract class AltaVehiculo {
 	
-	private String vehiculo_id;
-	private String descripcion;
-	
-	protected int contador_id=0;
+	protected String vehiculo_id;
+	protected String descripcion;
 
 	public abstract Vehiculo crearVehiculo();
 

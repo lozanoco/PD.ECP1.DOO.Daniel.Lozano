@@ -1,6 +1,7 @@
 package PD.Daniel.Lozano.Vehiculos;
 
 public class CategoriaA extends Categoria{
+	
 	private static final int PRECIO_CATEGORIA = 10;
 	
 	public CategoriaA() {

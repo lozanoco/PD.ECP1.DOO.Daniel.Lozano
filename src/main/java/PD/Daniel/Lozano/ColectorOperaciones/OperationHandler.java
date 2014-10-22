@@ -1,6 +1,5 @@
 package PD.Daniel.Lozano.ColectorOperaciones;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 public class OperationHandler {

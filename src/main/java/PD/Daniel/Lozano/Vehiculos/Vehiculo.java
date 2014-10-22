@@ -17,6 +17,13 @@ public abstract class Vehiculo {
 	public String getIdVehiculo() {
 		return id_vehiculo;
 	}
-
+	
+	public void mostrarVehiculo(){
+		toString();
+	}
+	
+	@Override
+	public abstract String toString();
+	
 	public abstract double calcularAlquiler(int dias);
 }

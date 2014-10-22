@@ -2,16 +2,20 @@ package PD.Daniel.Lozano.Vehiculos;
 
 public class AltaCoche extends AltaVehiculo {
 	
-	private Categoria categoria;
+	protected Categoria categoria;
 	
-	public Coche crearVehiculo() {
-		Coche coche= new Coche(Integer.toString(contador_id),"soy un coche",new CategoriaA());
-		contador_id++;
+	public Vehiculo crearVehiculo() {
+		Coche coche= new Coche(this.vehiculo_id,this.descripcion,categoria);
 		return coche;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
 	}
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
 
 }

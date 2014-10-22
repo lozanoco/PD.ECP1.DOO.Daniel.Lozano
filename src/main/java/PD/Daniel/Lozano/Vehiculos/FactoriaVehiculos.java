@@ -7,7 +7,8 @@ public class FactoriaVehiculos {
 
 	private ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
 	private static FactoriaVehiculos factoriaVehiculos = null;
-	private static AltaVehiculo tipoVehiculo = null;
+	private AltaVehiculo tipoVehiculo;
+	private Vehiculo vehiculo;
 
 	private FactoriaVehiculos(){
 	}
@@ -15,17 +16,17 @@ public class FactoriaVehiculos {
 	public static FactoriaVehiculos getFactory(){
 		if(factoriaVehiculos == null){
 			factoriaVehiculos = new FactoriaVehiculos();
-			tipoVehiculo = new AltaBicicleta();
 		}		
 		return factoriaVehiculos;
 	}
 
 	public void crearVehiculo(){
-		listaVehiculos.add(tipoVehiculo.crearVehiculo());
+		this.vehiculo = this.tipoVehiculo.crearVehiculo();
+		listaVehiculos.add(this.vehiculo);
 	}
 
 	public void setTipoVehiculo(AltaVehiculo altaVehiculo){
-		FactoriaVehiculos.tipoVehiculo = altaVehiculo;
+		this.tipoVehiculo = altaVehiculo;
 	}
 
 	public String mostrarVehiculos(){
@@ -52,4 +53,9 @@ public class FactoriaVehiculos {
 		}
 		return vehiculo;
 	}
+
+	public Vehiculo getVehiculo() {
+		return vehiculo;
+	}
+
 }
