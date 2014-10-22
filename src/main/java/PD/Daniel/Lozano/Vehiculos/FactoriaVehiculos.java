@@ -8,10 +8,10 @@ public class FactoriaVehiculos {
 	private ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
 	private static FactoriaVehiculos factoriaVehiculos = null;
 	private static AltaVehiculo tipoVehiculo = null;
-	
+
 	private FactoriaVehiculos(){
 	}
-	
+
 	public static FactoriaVehiculos getFactory(){
 		if(factoriaVehiculos == null){
 			factoriaVehiculos = new FactoriaVehiculos();
@@ -19,29 +19,29 @@ public class FactoriaVehiculos {
 		}		
 		return factoriaVehiculos;
 	}
-	
+
 	public void crearVehiculo(){
 		listaVehiculos.add(tipoVehiculo.crearVehiculo());
 	}
-	
+
 	public void setTipoVehiculo(AltaVehiculo altaVehiculo){
 		this.tipoVehiculo = altaVehiculo;
 	}
-	
+
 	public String mostrarVehiculos(){
 		String vehiculos ="";
 		Iterator<Vehiculo> vehiculosIterator = listaVehiculos.iterator();
 		while(vehiculosIterator.hasNext()){
 			vehiculos+=vehiculosIterator.next().toString()+"\n";
 		}
-	return vehiculos;
+		return vehiculos;
 	}
-	
+
 	public double calcularAlquiler(String id, int dias){
 		Vehiculo vehiculo = obtenerVehiculo(id);
 		return vehiculo.calcularAlquiler(dias);
 	}
-	
+
 	public Vehiculo obtenerVehiculo(String id){
 		Vehiculo vehiculo = null;	
 		Iterator<Vehiculo> vehiculosIterator = listaVehiculos.iterator();
@@ -50,6 +50,6 @@ public class FactoriaVehiculos {
 				vehiculo = vehiculosIterator.next();
 			}
 		}
-	return vehiculo;
+		return vehiculo;
 	}
 }
