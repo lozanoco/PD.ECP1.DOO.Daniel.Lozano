@@ -45,7 +45,7 @@ public class FactoriaVehiculos {
 		Vehiculo vehiculo = null;	
 		Iterator<Vehiculo> vehiculosIterator = listaVehiculos.iterator();
 		while(vehiculosIterator.hasNext()){
-			if(vehiculosIterator.next().id_vehiculo.equals(id)){
+			if(vehiculosIterator.next().getIdVehiculo().equals(id)){
 				vehiculo = vehiculosIterator.next();
 			}
 		}
