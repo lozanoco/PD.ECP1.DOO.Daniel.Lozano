@@ -1,11 +1,11 @@
 package PD.Daniel.Lozano.Vehiculos;
 
-public class Bicicleta extends Vehiculo {
-	static final int TARIFA_NORMAL = 3;
-	static final int TARIFA_REDUCIDA = 2;
-	static final int DIA_EMPIEZA_DESCUENTO = 2;
+public class Moto extends Vehiculo {
+	static final int TARIFA_NORMAL = 8;
+	static final int TARIFA_REDUCIDA = 7;
+	static final int DIA_EMPIEZA_DESCUENTO = 7;
 
-	public Bicicleta(String id_vehiculo,String description){
+	public Moto(String id_vehiculo,String description){
 		super(id_vehiculo, description);
 	}
 
@@ -17,18 +17,15 @@ public class Bicicleta extends Vehiculo {
 	@Override
 	public double calcularAlquiler(int dias) {
 		double precio=0;
-		if(dias>=DIA_EMPIEZA_DESCUENTO){
-			dias-=2;
-			precio += 2*TARIFA_NORMAL; 
+		if(dias>DIA_EMPIEZA_DESCUENTO){
+			precio = dias*TARIFA_REDUCIDA; 
 		}
-		else if(dias==1){
-			dias=0;
-			precio=1*TARIFA_NORMAL;
+		else if(dias<=DIA_EMPIEZA_DESCUENTO){
+			precio=dias*TARIFA_NORMAL;
 		}
 		else{
 			assert false : "numero de dias imposible";
 		} 
-		precio+=dias*TARIFA_REDUCIDA;
 		return precio;
 	}
 
