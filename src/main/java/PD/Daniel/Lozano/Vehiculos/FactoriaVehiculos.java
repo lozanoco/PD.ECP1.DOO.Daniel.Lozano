@@ -1,6 +1,7 @@
 package PD.Daniel.Lozano.Vehiculos;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class FactoriaVehiculos {
 
@@ -25,5 +26,29 @@ public class FactoriaVehiculos {
 	
 	public void setTipoVehiculo(AltaVehiculo altaVehiculo){
 		this.tipoVehiculo = altaVehiculo;
+	}
+	
+	public String mostrarVehiculos(){
+		String vehiculos ="";
+		Iterator<Vehiculo> vehiculosIterator = listaVehiculos.iterator();
+		while(vehiculosIterator.hasNext()){
+			vehiculos+=vehiculosIterator.next().toString()+"\n";
+		}
+	return vehiculos;
+	}
+	
+	public void calcularAlquiler(String id, int dias){
+		
+	}
+	
+	public Vehiculo obtenerVehiculo(String id){
+		Vehiculo vehiculo = null;	
+		Iterator<Vehiculo> vehiculosIterator = listaVehiculos.iterator();
+		while(vehiculosIterator.hasNext()){
+			if(vehiculosIterator.next().id_vehiculo.equals(id)){
+				vehiculo = vehiculosIterator.next();
+			}
+		}
+	return vehiculo;
 	}
 }
