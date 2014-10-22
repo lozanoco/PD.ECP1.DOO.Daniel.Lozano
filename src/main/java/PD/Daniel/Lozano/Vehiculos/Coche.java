@@ -7,7 +7,7 @@ public class Coche extends Vehiculo {
 	static final int DIA_TARIFA_REDUCIDA_1 = 3;
 	static final int DIA_TARIFA_REDUCIDA_2 = 7;
 	
-	private Categoria categoria;
+	public Categoria categoria;
 	
 	public Coche(String idVehiculo, String descripcion, Categoria categoria) {
 		super(idVehiculo, descripcion);
