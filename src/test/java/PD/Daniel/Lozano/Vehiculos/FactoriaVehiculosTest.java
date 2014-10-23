@@ -12,6 +12,9 @@ public class FactoriaVehiculosTest {
 	private Coche cocheCategoriaC;
 	private Moto moto;
 	private Bicicleta bicicleta;
+	private AltaCocheA altaCocheA;
+	private AltaBicicleta altaBici;
+	private AltaMoto altaMoto;
 
 	@Before
 	public void inicializar() {
@@ -20,9 +23,36 @@ public class FactoriaVehiculosTest {
 		this.cocheCategoriaC = new Coche("333333", "Seat Exeo catC", new CategoriaC());
 		this.moto = new Moto("444444", "Yamaha R6");
 		this.bicicleta = new Bicicleta("555555","BH");
+		
+		altaBici = new AltaBicicleta();
+		altaBici.setDescripcion("soy una bici");
+		altaBici.setVehiculo_id("BH");
+		FactoriaVehiculos.getFactory().setTipoVehiculo(altaBici);
+		FactoriaVehiculos.getFactory().crearVehiculo();
+		
+		altaCocheA = new AltaCocheA();
+		altaCocheA.setVehiculo_id("leon");
+		altaCocheA.setDescripcion("soy un seat");
+		FactoriaVehiculos.getFactory().setTipoVehiculo(altaCocheA);
+		FactoriaVehiculos.getFactory().crearVehiculo();
+		
+		altaMoto = new AltaMoto();
+		altaMoto.setVehiculo_id("yamaha");
+		altaMoto.setDescripcion("soy una R6");
+		FactoriaVehiculos.getFactory().setTipoVehiculo(altaMoto);
+		FactoriaVehiculos.getFactory().crearVehiculo();
 	}
+	
+	@Test
+    public void testCrear() {
+		assertEquals(new Bicicleta("BH", "soy una bici").toString(),FactoriaVehiculos.getFactory().obtenerVehiculo("BH").toString());
+    }
+	@Test
+    public void testMostrar() {
+		FactoriaVehiculos.getFactory().mostrarVehiculos();
+		assertEquals(10.0, 10, 10e-5);
+    }
 
-	 
 	 @Test
 	    public void testAlquilerCocheCategoriaA3() {
 			assertEquals(30.0, this.cocheCategoriaA.calcularAlquiler(3), 10e-5);

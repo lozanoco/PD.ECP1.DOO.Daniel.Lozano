@@ -5,10 +5,9 @@ import java.util.Iterator;
 
 public class FactoriaVehiculos {
 
-	private ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
+	private static ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
 	private static FactoriaVehiculos factoriaVehiculos = null;
-	private AltaVehiculo tipoVehiculo;
-	private Vehiculo vehiculo;
+	private  AltaVehiculo tipoVehiculo;
 
 	private FactoriaVehiculos(){
 	}
@@ -21,8 +20,7 @@ public class FactoriaVehiculos {
 	}
 
 	public void crearVehiculo(){
-		this.vehiculo = this.tipoVehiculo.crearVehiculo();
-		listaVehiculos.add(this.vehiculo);
+		listaVehiculos.add(this.tipoVehiculo.crearVehiculo());
 	}
 
 	public void setTipoVehiculo(AltaVehiculo altaVehiculo){
@@ -44,18 +42,18 @@ public class FactoriaVehiculos {
 	}
 
 	public Vehiculo obtenerVehiculo(String id){
-		Vehiculo vehiculo = null;	
+//		System.out.println(listaVehiculos.toString());
+		Vehiculo vehiculo=null,vehiculoAux = null;	
 		Iterator<Vehiculo> vehiculosIterator = listaVehiculos.iterator();
 		while(vehiculosIterator.hasNext()){
-			if(vehiculosIterator.next().getIdVehiculo().equals(id)){
-				vehiculo = vehiculosIterator.next();
+//			System.out.println((vehiculosIterator.next().getIdVehiculo()));
+			vehiculoAux=vehiculosIterator.next();
+			if(vehiculoAux.getIdVehiculo().equals(id)){
+				vehiculo = vehiculoAux;
 			}
 		}
 		return vehiculo;
 	}
 
-	public Vehiculo getVehiculo() {
-		return vehiculo;
-	}
 
 }

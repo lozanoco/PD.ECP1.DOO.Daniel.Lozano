@@ -16,7 +16,7 @@ public class Coche extends Vehiculo {
 
 	@Override
 	public String toString() {
-		return "\nTipo: "+ this.getClass().getSimpleName() + " \nid_vehiculo: " +this.getIdVehiculo() + " \ndescripcion: " + this.getDescripcion() + " \ncategoria: " + this.categoria;
+		return "\nTipo: "+ this.getClass().getSimpleName() + " \nid_vehiculo: " +this.getIdVehiculo() + " \ndescripcion: " + this.getDescripcion() + " \ncategoria: " + this.categoria.getNombre_categoria();
 	}
 
 	@Override

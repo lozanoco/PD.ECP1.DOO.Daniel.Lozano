@@ -1,21 +1,13 @@
 package PD.Daniel.Lozano.Vehiculos;
 
-public class AltaCoche extends AltaVehiculo {
+public abstract class AltaCoche extends AltaVehiculo {
 	
-	protected Categoria categoria;
+	protected String categoria;
 	
-	public Vehiculo crearVehiculo() {
-		Coche coche= new Coche(this.vehiculo_id,this.descripcion,categoria);
-		return coche;
+	public AltaCoche(String categoria) {
+		this.categoria=categoria;
 	}
 
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
-
+	public abstract Vehiculo crearVehiculo();
 
 }
