@@ -44,9 +44,20 @@ public class FactoriaVehiculosTest {
 	}
 	
 	@Test
-    public void testCrear() {
+    public void testCrearBici() {
 		assertEquals(new Bicicleta("BH", "soy una bici").toString(),FactoriaVehiculos.getFactory().obtenerVehiculo("BH").toString());
     }
+	
+	@Test
+    public void testCrearCoche() {
+		assertEquals(new Coche("leon", "soy un seat",new CategoriaA()).toString(),FactoriaVehiculos.getFactory().obtenerVehiculo("leon").toString());
+    }
+	
+	@Test
+    public void testCrearMoto() {
+		assertEquals(new Moto("yamaha", "soy una R6").toString(),FactoriaVehiculos.getFactory().obtenerVehiculo("yamaha").toString());
+    }
+	
 	@Test
     public void testMostrar() {
 		FactoriaVehiculos.getFactory().mostrarVehiculos();
